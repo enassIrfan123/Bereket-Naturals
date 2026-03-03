@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Developer tools
+.vscode/
+.idea/
+*.log
+
+# Temp files
+tmp/
+temp/

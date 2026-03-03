@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Bereket Naturals</title>
+    <meta name="description"
+        content="Explore our full range of premium organic brands - Jhat Hazam, Niwala, Jarfull, kuVvet, Liffest, and Major Grains.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f9fbf9 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .brand-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .brand-section:nth-child(even) {
+            background-color: #fcfdfc;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .brand-section:nth-child(even) .brand-grid {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .brand-section:nth-child(even) .brand-info {
+            order: 2;
+        }
+
+        .brand-info h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2D3436;
+        }
+
+        .brand-tagline {
+            display: inline-block;
+            font-style: italic;
+            color: #8BC34A;
+            font-weight: 500;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .brand-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            transition: transform 0.5s ease;
+        }
+
+        .brand-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .brand-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .variant-list {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .variant-pill {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #636e72;
+            transition: all 0.3s ease;
+        }
+
+        .variant-pill:hover {
+            border-color: #8BC34A;
+            color: #8BC34A;
+            background: #f9fbf9;
+        }
+
+        .brand-image.white-bg {
+            background-color: #ffffff;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Background Accent */
+        .brand-image.white-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 195, 74, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .brand-image.white-bg img {
+            max-height: 400px;
+            width: auto;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
+        }
+
+        @media (max-width: 968px) {
+            .brand-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px;
+            }
+
+            .brand-info {
+                order: 1 !important;
+            }
+
+            .brand-image {
+                order: 2 !important;
+            }
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="our-products.html" class="dropdown-trigger">Our Brands</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#jhat-hazam">Jhat Hazam</a></li>
+                        <li><a href="#major-grains">Major Grains</a></li>
+                        <li><a href="#kuvvet-porridge">kuVvet Porridge</a></li>
+                        <li><a href="#kuvvet-cereals">kuVvet Cereals</a></li>
+                        <li><a href="#liffest">Liffest</a></li>
+                        <li><a href="#jams">Jarfull Jams</a></li>
+                        <li><a href="#niwala">Niwala</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo-link">
+                <img src="assets/naturals-logo.png" alt="Bereket Naturals" class="brand-logo">
+            </a>
+
+            <ul class="nav-links right-links">
+                <li><a href="index.html#bestsellers">Sellers</a></li>
+                <li><a href="index.html#about">Story</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-btn">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="badge">Full Collection</span>
+            <h1>Our Premium Brands</h1>
+            <p style="max-width: 700px; margin: 20px auto 0;">Delve into the diverse world of Bereket Naturals. From the
+                heritage pulses of Niwala to the modern energy of kuVvet, find the perfect nourishment for your
+                lifestyle.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Jhat Hazam Section -->
+        <section id="jhat-hazam" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-info">
+                    <span class="badge">Digestive Wellness</span>
+                    <h2>Jhat Hazam</h2>
+                    <span class="brand-tagline">"Flavors That Redefine Health"</span>
+                    <p>Jhat Hazam is our signature line of digestive excellence. Crafted with the finest Himalayan
+                        Salt, these tablets are designed to provide sudden relief while delighting your palate with
+                        traditional flavors.</p>
+                    <p>At Bereket Naturals, we believe that taking care of your digestive health should be a pleasant
+                        experience, which is why we've balanced bioactive efficacy with gourmet taste.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Anaar</span>
+                        <span class="variant-pill">Imlee</span>
+                        <span class="variant-pill">Aamchoor</span>
+                        <span class="variant-pill">Cola</span>
+                        <span class="variant-pill">Amrood</span>
+                    </div>
+                </div>
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/jhat_hazam_bottles.jpg" alt="Jhat Hazam Digestive Tablets">
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Grains Section -->
+        <section id="major-grains" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/major_grains_products.png" alt="Major Grains Cereals">
+                </div>
+                <div class="brand-info">
+                    <span class="badge">Premium Cereals</span>
+                    <h2>Major Grains</h2>
+                    <span class="brand-tagline">"Authentic Wholesome Grains"</span>
+                    <p>Major Grains stands as a cornerstone of our cereal collection, offering multi-nutrient
+                        grain-based products that fuel your daily life with the best nature has to offer.</p>
+                    <p>Each batch is carefully sourced and processed to maintain the nutritional integrity of the
+                        grains, ensuring fiber, minerals, and vitamins reach your breakfast table intact.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Corn Flakes</span>
+                        <span class="variant-pill">Choco Stars</span>
+                        <span class="variant-pill">Chocolate Loops</span>
+                        <span class="variant-pill">Whole Wheat Flakes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- kuVvet Porridge Section -->
+        <section id="kuvvet-porridge" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-info">
+                    <span class="badge">Nourishing Porridge</span>
+                    <h2>kuVvet Porridge</h2>
+                    <span class="brand-tagline">"More Power To You"</span>
+                    <p>kuVvet Porridge is formulated using Nutribond technology to provide a comforting, vitamin-packed
+                        start to your day. It's the ultimate wholesome meal for a modern, health-conscious lifestyle.
+                    </p>
+                    <p>Designed for those who demand sustained energy, our porridge blends are light on the stomach yet
+                        rich in sustained-release nutrients.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Barley Porridge</span>
+                        <span class="variant-pill">Wheat Porridge</span>
+                        <span class="variant-pill">Oatmeal Blend</span>
+                    </div>
+                </div>
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/kuvvet_porridge_products.png" alt="kuVvet Porridge">
+                </div>
+            </div>
+        </section>
+
+        <!-- kuVvet Cereals Section -->
+        <section id="kuvvet-cereals" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/kuvvet_cereals_products.png" alt="kuVvet Cereals">
+                </div>
+                <div class="brand-info">
+                    <span class="badge">Energy Cereals</span>
+                    <h2>kuVvet Cereals</h2>
+                    <span class="brand-tagline">"Strength from the Source"</span>
+                    <p>Complementing our porridge, kuVvet Cereals offer a crunchy, multi-grain alternative that packs a
+                        nutritional punch. Perfect for the active individual seeking a quick, nutrient-dense breakfast.
+                    </p>
+                    <p>Infused with the same quality standards as our entire range, these cereals are designed to keep
+                        you powered throughout your busiest mornings.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Multi-Grain Crunchy</span>
+                        <span class="variant-pill">Power Flakes</span>
+                        <span class="variant-pill">Protein-Rich Cereal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liffest Section -->
+        <section id="liffest" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-info">
+                    <span class="badge">Lifestyle Cereals</span>
+                    <h2>Liffest</h2>
+                    <span class="brand-tagline">"Celebrating Pure Life"</span>
+                    <p>Liffest is our premier export brand, taking Pakistan's high-quality cereals to the world. It
+                        represents our commitment to pure, hygienic, and multi-nutrient food products.</p>
+                    <p>From chocolate-flavored loops to crispy corn shells, Liffest brings joy and health to children
+                        and adults alike across global markets.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Choco Stars</span>
+                        <span class="variant-pill">Chocolate Loops</span>
+                        <span class="variant-pill">Frosted Flakes</span>
+                    </div>
+                </div>
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/liffest_products.png" alt="Liffest Cereals">
+                </div>
+            </div>
+        </section>
+
+        <!-- Jarfull Jams Section -->
+        <section id="jams" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/jarfull_jars.png" alt="Jarfull Organic Jams">
+                </div>
+                <div class="brand-info">
+                    <span class="badge">Organic Jams</span>
+                    <h2>Jarfull</h2>
+                    <span class="brand-tagline">"Love & Happiness Preserved"</span>
+                    <p>Jarfull represents the heart of our preservation expertise. We slowly simmer sun-ripened fruits
+                        using traditional methods to maintain their vibrant, natural flavors and pectins.</p>
+                    <p>Every spoonful of Jarfull is a taste of pure nature, completely free from commercial
+                        preservatives or synthetic fillers, ensuring a joyful experience for the whole family.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Strawberry Jam</span>
+                        <span class="variant-pill">Apple Jam</span>
+                        <span class="variant-pill">Mango Jam</span>
+                        <span class="variant-pill">Mix Fruit Jam</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Niwala Section -->
+        <section id="niwala" class="brand-section">
+            <div class="container brand-grid">
+                <div class="brand-info">
+                    <span class="badge">Pulses & Rice</span>
+                    <h2>Niwala</h2>
+                    <span class="brand-tagline">"Har Niwala Khushyoun Wala"</span>
+                    <p>Niwala is deeply rooted in Pakistan's agricultural heritage. As a brand dedicated to a healthy
+                        lifestyle, we ensure that every grain of pulse and rice is 100% natural and farm-sourced.</p>
+                    <p>Our Basmati rice and premium pulses are selected with a focus on aroma, texture, and nutritional
+                        value, bringing the finest scents to your family kitchen.</p>
+                    <div class="variant-list">
+                        <span class="variant-pill">Royal Kainat Basmati</span>
+                        <span class="variant-pill">Golden Sella</span>
+                        <span class="variant-pill">Kala Chana</span>
+                        <span class="variant-pill">Dal Chana</span>
+                        <span class="variant-pill">Kabuli Chana</span>
+                    </div>
+                </div>
+                <div class="brand-image white-bg mask-reveal">
+                    <img src="assets/niwala_products.png" alt="Niwala Rice and Pulses">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Unique Integrated Footer Section -->
+    <footer id="contact" class="premium-footer">
+        <div class="container footer-content">
+            <div class="footer-top-row">
+                <div class="newsletter-box">
+                    <span class="badge"
+                        style="background: rgba(255,255,255,0.1); color: var(--white); margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2);">Join
+                        Our Circle</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Nature in your inbox.</h2>
+                    <p style="opacity: 0.7; margin-bottom: 2rem;">Crafting pure, organic wellness for your family and
+                        the future of our planet.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer-info-grid">
+                    <!-- Main Websites Subsection -->
+                    <div class="footer-col">
+                        <h4>Websites</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://www.bereketfoods.com" target="_blank">Bereket Foods</a></li>
+                            <li><a href="#">Bereket International</a></li>
+                        </ul>
+                        <h4 style="margin-top: 2rem;">Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Subsection -->
+                    <div class="footer-col" style="grid-column: span 2;">
+                        <h4>Contact Us</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <strong>Islamabad Office:</strong><br>
+                                <span>3rd Floor, 13-Plaza, Overseas V Commercial, Bahria Town Phase 8, Islamabad.</span>
+                            </li>
+                            <li>
+                                <strong>Overseas Office:</strong><br>
+                                <span>Suite 205, 40 Hunt Street, Ajax, ON L1S 3M2, Canada</span>
+                            </li>
+                            <li>
+                                <strong>Factory Address:</strong><br>
+                                <span>2 Km From Bahawalpur Bypass, Bahawalpur Road, Multan</span>
+                            </li>
+                            <li style="margin-top: 1rem;">
+                                <a href="mailto:info@bereketfoods.com"
+                                    style="color: inherit; text-decoration: none;">info@bereketfoods.com</a>
+                            </li>
+                            <li>
+                                <span>+92 333 5647799</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massive Brand Watermark -->
+            <div class="footer-watermark">
+                BEREKET
+            </div>
+
+            <div class="footer-bottom-row">
+                <div class="left-rights">
+                    &copy; 2026 Bereket Naturals. All Rights Reserved. &nbsp;|&nbsp; <span style="opacity: 0.6;">Powered
+                        By UAN technologies &reg;</span>
+                </div>
+                <div class="social-links inline-socials">
+                    <a href="https://www.linkedin.com/company/bereket-naturals-pvt-ltd" target="_blank"
+                        class="social-icon"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61554737829695" target="_blank"
+                        class="social-icon"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <script>
+        // Use Lucide icons
+        lucide.createIcons();
+
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        // 1. Lenis Smooth Scroll
+        const lenis = new Lenis();
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // 2. Magnetic Effects
+        const magneticElements = document.querySelectorAll('.nav-links a, .btn, .social-icon');
+        magneticElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(el, {
+                    x: x * 0.3,
+                    y: y * 0.3,
+                    duration: 0.6,
+                    ease: "power2.out"
+                });
+            });
+            el.addEventListener('mouseleave', () => {
+                gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.3)" });
+            });
+        });
+
+        // 3. Header reveal
+        gsap.from('.page-header h1, .page-header p, .page-header .badge', {
+            opacity: 0,
+            y: 30,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // 4. Reveal Animations for Brands
+        const revealImages = document.querySelectorAll('.mask-reveal');
+        revealImages.forEach(mask => {
+            ScrollTrigger.create({
+                trigger: mask,
+                start: 'top 85%',
+                onEnter: () => mask.classList.add('active'),
+                once: true
+            });
+        });
+
+        const animateOnScroll = (selector, yOffset = 50, stagger = 0) => {
+            gsap.utils.toArray(selector).forEach((elem) => {
+                gsap.fromTo(elem,
+                    { opacity: 0, y: yOffset },
+                    {
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse"
+                        },
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.2,
+                        ease: "power3.out",
+                        stagger: stagger
+                    }
+                );
+            });
+        };
+
+        animateOnScroll('.brand-info', 30, 0.1);
+        animateOnScroll('.premium-footer .footer-content', 20);
+
+        // Navbar blur on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
