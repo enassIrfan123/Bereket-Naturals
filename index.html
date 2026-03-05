@@ -29,7 +29,7 @@
             <ul class="nav-links left-links">
                 <li><a href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a href="our-products.html" class="dropdown-trigger">Our Brands</a>
+                    <a href="our-products.html" class="dropdown-trigger">Our Products</a>
                     <ul class="dropdown-menu">
                         <li><a href="our-products.html#jhat-hazam">Jhat Hazam</a></li>
                         <li><a href="our-products.html#major-grains">Major Grains</a></li>
@@ -40,17 +40,20 @@
                         <li><a href="our-products.html#niwala">Niwala</a></li>
                     </ul>
                 </li>
+                <li><a href="#bestsellers">Sellers</a></li>
+                <li><a href="#about">Story</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-btn">Get in Touch</a></li>
             </ul>
 
             <a href="#" class="logo-link">
                 <img src="assets/naturals-logo.png" alt="Bereket Naturals" class="brand-logo">
             </a>
 
-            <ul class="nav-links right-links">
-                <li><a href="#bestsellers">Sellers</a></li>
-                <li><a href="#about">Story</a></li>
-                <li><a href="#contact" class="btn btn-primary nav-btn">Get in Touch</a></li>
-            </ul>
+            <button class="burger-menu" id="burger-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -90,6 +93,89 @@
         </div>
     </section>
 
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2 class="counter" data-target="4">0</h2>
+                    <p>Global Offices</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="15">0</h2>
+                    <p>Premium Products</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="100">0</h2>
+                    <p>% Natural Ingredients</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="2022">0</h2>
+                    <p>Since Established</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section (Why We Do) -->
+    <section class="section philosophy-section">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div class="philosophy-text">
+                    <span>Our Philosophy</span>
+                    <h2>Nature Powered by Science.</h2>
+                    <div class="philosophy-content">
+                        <blockquote>"Bringing prosperity to your table through the perfect amalgamation of nature and
+                            science."</blockquote>
+                        <p>At Bereket Naturals, we believe that abundance—or 'Bereket'—is found in the purity of the
+                            land. Our mission is to bridge the gap between traditional wholesome goodness and modern
+                            nutritional science, ensuring that every product we craft nourishes not just the body, but
+                            the future of our global community.</p>
+                    </div>
+                </div>
+                <div class="philosophy-image mask-reveal">
+                    <img src="assets/philosophy_section.png" alt="Innovation & Nature" style="border-radius: 40px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Bereket Advantage (Why Special) -->
+    <section id="advantage" class="section advantage-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Why We Differ</span>
+                <h2>The Bereket Advantage</h2>
+            </div>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Standardization</h3>
+                    <p>We offer convenience with consistent quality, international standardization, and competitive
+                        timelines across all our food and CHC categories.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Modern Extrusion</h3>
+                    <p>Our Multan-based state-of-the-art cereal extrusion and coating lines produce elite nutrition
+                        tailored for modern health-conscious lifestyles.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <h3>100% Sourced Nature</h3>
+                    <p>From the purest fields to your table, our products are Halal-certified and crafted using the
+                        safest, finest ingredients available globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- What We Do (Products) Section -->
     <section id="products" class="section" style="background: #fff;">
         <div class="container">
@@ -116,7 +202,8 @@
                             exporters, we specialize in high-quality, multi-nutrient grains that are cultivated with
                             care to ensure they deliver the necessary energy to fuel your busy day.</p>
                         <p>We take immense pride in our leading cereal brands, <strong>Liffest</strong>,
-                            <strong>kuVvet</strong>, and <strong>Major Grains</strong>, which are renowned for their
+                            <strong>kuVvet</strong> (powered by <strong>Nutribond</strong> technology), and
+                            <strong>Major Grains</strong>, which are renowned for their
                             purity and hygienic processing. Whether it's cholesterol-lowering oats or fiber-rich grains,
                             our reputable selection is designed to satisfy the diverse nutritional needs of our global
                             customers.
@@ -142,7 +229,8 @@
                             </svg>
                         </div>
                         <p>Experience <strong>"Flavors That Redefine Health"</strong> with <strong>Jhat Hazam</strong>,
-                            our signature line of premium digestive tablets designed to restore your inner balance.
+                            our signature line of <strong>DRAP Approved</strong> premium digestive tablets designed to
+                            restore your inner balance.
                             Crafted with the finest <strong>Himalayan Salt</strong>, these tablets provide sudden
                             relief while delighting your palate with traditional flavors. At Bereket Naturals, we
                             believe that digestive health should be a pleasant experience.</p>
@@ -251,7 +339,101 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 60px;">
-                <a href="our-products.html" class="btn btn-outline">Discover All Brands</a>
+                <a href="our-products.html" class="btn btn-outline">Discover All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach Section (Import/Export) -->
+    <section id="global-reach" class="section export-section">
+        <div class="container">
+            <div class="export-grid">
+                <div class="export-text">
+                    <span class="export-tag">Global Foothold</span>
+                    <h2>Nourishing the World.</h2>
+                    <p>With a strategic presence in <strong>Pakistan</strong> and <strong>Canada</strong>, Bereket
+                        Naturals is export-ready and positioned to serve international trade requirements efficiently.
+                        Our Multan manufacturing hub is the heart of our global distribution network.</p>
+                    <div class="markets-grid">
+                        <div class="market-item">
+                            <div class="market-icon"><i data-lucide="globe"></i></div>
+                            <div>
+                                <strong>Middle East</strong>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">Halal-Compliant Solutions</p>
+                            </div>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-icon"><i data-lucide="navigation"></i></div>
+                            <div>
+                                <strong>North America</strong>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">Quality-Driven Exports</p>
+                            </div>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <strong>Europe</strong>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">Standardized Purity</p>
+                            </div>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-icon"><i data-lucide="home"></i></div>
+                            <div>
+                                <strong>Local Presence</strong>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">Multan & Islamabad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="export-visual">
+                    <div class="global-map-visual">
+                        <!-- Minimalistic World Map SVG -->
+                        <svg class="map-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#e1e5e1" d="M150 100h100v50H150zm200 50h150v50H350zm300 100h100v50H650z"
+                                opacity="0.3" />
+                            <!-- Abstract World Map Shapes -->
+                            <path fill="#d1d8d1"
+                                d="M250 120c-20 0-40 20-40 40h100c0-20-20-40-40-40zM600 200c-30 0-60 30-60 60h120c0-30-30-60-60-60zM400 300c-25 0-50 25-50 50h100c0-25-25-50-50-50z"
+                                opacity="0.5" />
+                            <!-- More realistic abstract continents -->
+                            <path fill="#cbd5cb"
+                                d="M180 150q50-20 100 0t100 50-50 100-150-20-100-80zM550 100q80 20 120 100t-20 150-150 50-100-150 150-150zM750 250q60 10 80 80t-40 100-120-20-40-100 120-60z"
+                                opacity="0.4" />
+                        </svg>
+
+                        <!-- Pulse Points -->
+                        <div class="map-pulse" style="top: 35%; left: 22%;" title="Ajax, Canada">
+                            <div class="hub-label">Canada</div>
+                        </div>
+                        <div class="map-pulse" style="top: 55%; left: 63%;" title="Islamabad, Pakistan">
+                            <div class="hub-label">Islamabad</div>
+                        </div>
+                        <div class="map-pulse" style="top: 62%; left: 61%;" title="Multan, Pakistan">
+                            <div class="hub-label">Multan (Hub)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Partnerships -->
+    <section class="partners-section">
+        <div class="container">
+            <p>Trusted byproduct manufacturing & private labels</p>
+            <div class="partner-ticker">
+                <div class="partner-logo-item">
+                    <i data-lucide="shopping-cart" style="color: #0066b2;"></i>
+                    CARREFOUR
+                </div>
+                <div class="partner-logo-item">
+                    <i data-lucide="award" style="color: #e51c23;"></i>
+                    CHASEUP
+                </div>
+                <div class="partner-logo-item">
+                    <i data-lucide="layers" style="color: #1b5e20;"></i>
+                    BEREKET INT.
+                </div>
             </div>
         </div>
     </section>
@@ -275,7 +457,7 @@
                     <p>Authentic wholesome grains packed with essential nutrients for your day.</p>
                 </div>
                 <div class="product-card">
-                    <img src="assets/kuvvet_porridge_products.png" alt="kuVvet Porridge" class="seller-image">
+                    <img src="assets/kuvvet-bags.png" alt="kuVvet Porridge" class="seller-image">
                     <h3>kuVvet Porridge</h3>
                     <p>Nourishing slow-cooked goodness powered by Nutribond technology.</p>
                 </div>
@@ -476,6 +658,58 @@
         );
 
         animateOnScroll('.premium-footer .footer-content', 20);
+
+        // 6. Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + speed);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target + (target === 100 ? '%' : target === 2022 ? '' : '+');
+                }
+            };
+
+            ScrollTrigger.create({
+                trigger: counter,
+                start: "top 90%",
+                onEnter: () => updateCount(),
+                once: true
+            });
+        });
+
+        // 7. Additional Sections Scroll Reveals
+        animateOnScroll('.philosophy-text, .philosophy-image');
+        animateOnScroll('.advantage-card', 40, 0.1);
+        animateOnScroll('.export-text, .export-visual');
+        animateOnScroll('.partner-ticker', 20);
+
+        // 8. Mobile Menu Toggle
+        const burgerToggle = document.getElementById('burger-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (burgerToggle && navLinks) {
+            burgerToggle.addEventListener('click', () => {
+                burgerToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.classList.toggle('mobile-nav-active');
+            });
+
+            // Close menu when clicking links
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    burgerToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('mobile-nav-active');
+                });
+            });
+        }
     </script>
 </body>
 

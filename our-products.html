@@ -16,142 +16,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            padding: 120px 0 60px;
-            background: linear-gradient(135deg, #f9fbf9 0%, #ffffff 100%);
-            text-align: center;
-        }
-
-        .brand-section {
-            padding: 80px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .brand-section:nth-child(even) {
-            background-color: #fcfdfc;
-        }
-
-        .brand-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .brand-section:nth-child(even) .brand-grid {
-            grid-template-columns: 1fr 1.2fr;
-        }
-
-        .brand-section:nth-child(even) .brand-info {
-            order: 2;
-        }
-
-        .brand-info h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #2D3436;
-        }
-
-        .brand-tagline {
-            display: inline-block;
-            font-style: italic;
-            color: #8BC34A;
-            font-weight: 500;
-            margin-bottom: 25px;
-            font-size: 1.2rem;
-        }
-
-        .brand-image {
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-            transition: transform 0.5s ease;
-        }
-
-        .brand-image:hover {
-            transform: translateY(-10px);
-        }
-
-        .brand-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .variant-list {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .variant-pill {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: #636e72;
-            transition: all 0.3s ease;
-        }
-
-        .variant-pill:hover {
-            border-color: #8BC34A;
-            color: #8BC34A;
-            background: #f9fbf9;
-        }
-
-        .brand-image.white-bg {
-            background-color: #ffffff;
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Subtle Background Accent */
-        .brand-image.white-bg::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(139, 195, 74, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .brand-image.white-bg img {
-            max-height: 400px;
-            width: auto;
-            object-fit: contain;
-            position: relative;
-            z-index: 1;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
-        }
-
-        @media (max-width: 968px) {
-            .brand-grid {
-                grid-template-columns: 1fr !important;
-                gap: 40px;
-            }
-
-            .brand-info {
-                order: 1 !important;
-            }
-
-            .brand-image {
-                order: 2 !important;
-            }
-        }
-    </style>
-
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -161,10 +25,10 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="container nav-container">
-            <ul class="nav-links left-links">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a href="our-products.html" class="dropdown-trigger">Our Brands</a>
+                    <a href="our-products.html" class="dropdown-trigger">Our Products</a>
                     <ul class="dropdown-menu">
                         <li><a href="#jhat-hazam">Jhat Hazam</a></li>
                         <li><a href="#major-grains">Major Grains</a></li>
@@ -175,24 +39,27 @@
                         <li><a href="#niwala">Niwala</a></li>
                     </ul>
                 </li>
+                <li><a href="index.html#bestsellers">Sellers</a></li>
+                <li><a href="index.html#about">Story</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-btn">Get in Touch</a></li>
             </ul>
 
             <a href="index.html" class="logo-link">
                 <img src="assets/naturals-logo.png" alt="Bereket Naturals" class="brand-logo">
             </a>
 
-            <ul class="nav-links right-links">
-                <li><a href="index.html#bestsellers">Sellers</a></li>
-                <li><a href="index.html#about">Story</a></li>
-                <li><a href="#contact" class="btn btn-primary nav-btn">Get in Touch</a></li>
-            </ul>
+            <button class="burger-menu" id="burger-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container">
             <span class="badge">Full Collection</span>
-            <h1>Our Premium Brands</h1>
+            <h1>Our Premium Products</h1>
             <p style="max-width: 700px; margin: 20px auto 0;">Delve into the diverse world of Bereket Naturals. From the
                 heritage pulses of Niwala to the modern energy of kuVvet, find the perfect nourishment for your
                 lifestyle.</p>
@@ -207,7 +74,8 @@
                     <span class="badge">Digestive Wellness</span>
                     <h2>Jhat Hazam</h2>
                     <span class="brand-tagline">"Flavors That Redefine Health"</span>
-                    <p>Jhat Hazam is our signature line of digestive excellence. Crafted with the finest Himalayan
+                    <p>Jhat Hazam is our signature line of <strong>DRAP Approved</strong> digestive excellence. Crafted
+                        with the finest Himalayan
                         Salt, these tablets are designed to provide sudden relief while delighting your palate with
                         traditional flavors.</p>
                     <p>At Bereket Naturals, we believe that taking care of your digestive health should be a pleasant
@@ -241,7 +109,6 @@
                     <p>Each batch is carefully sourced and processed to maintain the nutritional integrity of the
                         grains, ensuring fiber, minerals, and vitamins reach your breakfast table intact.</p>
                     <div class="variant-list">
-                        <span class="variant-pill">Corn Flakes</span>
                         <span class="variant-pill">Choco Stars</span>
                         <span class="variant-pill">Chocolate Loops</span>
                         <span class="variant-pill">Whole Wheat Flakes</span>
@@ -269,7 +136,7 @@
                     </div>
                 </div>
                 <div class="brand-image white-bg mask-reveal">
-                    <img src="assets/kuvvet_porridge_products.png" alt="kuVvet Porridge">
+                    <img src="assets/kuvvet.png" alt="kuVvet Porridge">
                 </div>
             </div>
         </section>
@@ -287,7 +154,8 @@
                     <p>Complementing our porridge, kuVvet Cereals offer a crunchy, multi-grain alternative that packs a
                         nutritional punch. Perfect for the active individual seeking a quick, nutrient-dense breakfast.
                     </p>
-                    <p>Infused with the same quality standards as our entire range, these cereals are designed to keep
+                    <p>Infused with <strong>Nutribond</strong> technology and the same quality standards as our entire
+                        range, these cereals are designed to keep
                         you powered throughout your busiest mornings.</p>
                     <div class="variant-list">
                         <span class="variant-pill">Multi-Grain Crunchy</span>
@@ -304,7 +172,12 @@
                 <div class="brand-info">
                     <span class="badge">Lifestyle Cereals</span>
                     <h2>Liffest</h2>
-                    <span class="brand-tagline">"Celebrating Pure Life"</span>
+                    <div class="brand-tagline">
+                        <span
+                            style="color: var(--accent); font-weight: 800; border: 1px solid var(--accent); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle; margin-right: 10px;">EXPORT
+                            READY</span>
+                        "Celebrating Pure Life"
+                    </div>
                     <p>Liffest is our premier export brand, taking Pakistan's high-quality cereals to the world. It
                         represents our commitment to pure, hygienic, and multi-nutrient food products.</p>
                     <p>From chocolate-flavored loops to crispy corn shells, Liffest brings joy and health to children
@@ -366,6 +239,105 @@
                 </div>
                 <div class="brand-image white-bg mask-reveal">
                     <img src="assets/niwala_products.png" alt="Niwala Rice and Pulses">
+                </div>
+            </div>
+        </section>
+
+        <!-- Consistent Advantage Section -->
+        <section class="section advantage-section" style="background: var(--background);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">The Bereket Standard</span>
+                    <h2>Why Our Products Excel</h2>
+                </div>
+                <div class="advantage-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <h3>Halal Certified</h3>
+                        <p>Every product across our entire brand portfolio is 100% Halal-certified, meeting the highest
+                            global standards for purity and ethical sourcing.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <h3>Modern Extrusion</h3>
+                        <p>Utilizing state-of-the-art technology at our Multan facility, we ensure nutrient retention
+                            and premium texture in every batch.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <h3>Export Ready</h3>
+                        <p>From Pakistan to Canada and beyond, our products are packaged and formulated to meet rigorous
+                            international trade and quality requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Innovation & Standards Section -->
+        <section id="innovation" class="brand-section">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 80px;">
+                    <span class="badge">Quality & Innovation</span>
+                    <h2 style="font-size: 3rem; margin-top: 10px;">Innovation & Standards</h2>
+                    <p style="max-width: 700px; margin: 20px auto 0; font-size: 1.1rem; color: var(--text-muted);">
+                        Bringing
+                        prosperity to your table through the perfect amalgamation of nature and science.</p>
+                </div>
+
+                <div class="brand-grid" style="margin-bottom: 100px;">
+                    <div class="brand-info">
+                        <span class="badge"
+                            style="background: rgba(139, 195, 74, 0.1); color: var(--secondary);">Technical
+                            Benchmark</span>
+                        <h3 style="font-size: 2.2rem; margin: 15px 0;">Nutribond™ Technology</h3>
+                        <p><strong>What it is:</strong> A proprietary nutrient-binding process developed by Bereket
+                            Naturals to ensure that the delicate vitamins and minerals found in raw grains are preserved
+                            throughout the production cycle.</p>
+                        <p><strong>Why we need it:</strong> Standard high-heat processing often destroys essential
+                            nutrients. Nutribond™ bridges the gap, ensuring that every bite is as bioavailable as nature
+                            intended.</p>
+                        <p><strong>Our Purpose:</strong> We implemented this technology to fulfill our promise of
+                            providing "More Power To You," turning everyday meals into high-performance fuel for your
+                            body.</p>
+                    </div>
+                    <div class="brand-image white-bg mask-reveal">
+                        <div style="padding: 60px; text-align: center;">
+                            <i data-lucide="microscope"
+                                style="width: 100px; height: 100px; color: var(--secondary); opacity: 0.8;"></i>
+                            <p style="margin-top: 30px; font-weight: 700; color: #2D3436; font-size: 1.2rem;">
+                                Science-Backed Nutrition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-grid" style="grid-template-columns: 1fr 1.2fr;">
+                    <div class="brand-image white-bg mask-reveal">
+                        <div style="padding: 60px; text-align: center;">
+                            <i data-lucide="shield-check"
+                                style="width: 100px; height: 100px; color: var(--secondary); opacity: 0.8;"></i>
+                            <p style="margin-top: 30px; font-weight: 700; color: #2D3436; font-size: 1.2rem;">Regulatory
+                                Excellence</p>
+                        </div>
+                    </div>
+                    <div class="brand-info">
+                        <span class="badge" style="background: rgba(139, 195, 74, 0.1); color: var(--secondary);">Safety
+                            Benchmark</span>
+                        <h3 style="font-size: 2.2rem; margin: 15px 0;">DRAP Approvals</h3>
+                        <p><strong>What it is:</strong> Certification by the Drug Regulatory Authority of Pakistan
+                            (DRAP), ensuring that our wellness products meet pharmaceutical-grade standards for safety
+                            and efficacy.</p>
+                        <p><strong>Why we need it:</strong> Digestive wellness is a serious responsibility. DRAP
+                            approval guarantees that products like Jhat Hazam are not just flavorful, but scientifically
+                            validated for consumer safety.</p>
+                        <p><strong>Our Purpose:</strong> Bereket Naturals pursued these rigorous certifications to build
+                            a foundation of medical-grade trust, ensuring that our traditional recipes meet modern
+                            global safety benchmarks.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -543,6 +515,28 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Mobile Menu Toggle
+        const burgerToggle = document.getElementById('burger-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (burgerToggle && navLinks) {
+            burgerToggle.addEventListener('click', () => {
+                burgerToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.classList.toggle('mobile-nav-active');
+            });
+
+            // Close menu when clicking links
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    burgerToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('mobile-nav-active');
+                });
+            });
+        }
     </script>
 </body>
 
